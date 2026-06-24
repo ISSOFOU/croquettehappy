@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CroquetteHappy — Système d'emballage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="./assets/img/logo-color.svg">
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+  body { display:flex; min-height:100vh; align-items:center; justify-content:center; width:100%; box-sizing:border-box; }
+  .hero { max-width:640px; width:100%; padding:48px; text-align:center; box-sizing:border-box; }
+  .links { display:flex; gap:16px; justify-content:center; margin-top:40px; flex-wrap:wrap; }
+  .link-card { display:block; flex:1; min-width:220px; background:#fff; border:1px solid var(--cream-border); border-radius:12px; padding:28px; text-decoration:none; box-sizing:border-box; }
+  .link-card .k { font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; }
+  .link-card .t { font-family:var(--font-display); font-weight:700; font-size:18px; color:var(--green-deep); margin-top:8px; }
+  .link-card .d { font-size:13.5px; color:var(--green-soft); margin-top:8px; line-height:1.5; }
+  @media (max-width: 380px) {
+    .hero { padding:32px 20px; }
+    .link-card { min-width:100%; }
+  }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <img src="./assets/img/logo-color.svg" width="72" height="72" alt="CroquetteHappy" style="margin:0 auto;">
+    <div style="font-family:var(--font-display); font-weight:700; font-size:36px; color:var(--green-deep); margin-top:20px; letter-spacing:-.01em;">CroquetteHappy</div>
+    <div style="font-size:15px; color:var(--green-soft); margin-top:10px;">Système d'emballage — sachets chien &amp; chat</div>
+
+    <div class="links">
+      <a class="link-card" href="./packaging.html">
+        <div class="k">Vue d'ensemble</div>
+        <div class="t">Packaging</div>
+        <div class="d">Les deux sachets bi-ton côte à côte, déclinaisons du logo, palette &amp; typographie.</div>
+      </a>
+      <a class="link-card" href="./charte-graphique.html">
+        <div class="k">Document · 9 pages A4</div>
+        <div class="t">Charte graphique</div>
+        <div class="d">Le guide complet : principes, logo, couleurs, typo, anatomie face avant/arrière, réglementation.</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

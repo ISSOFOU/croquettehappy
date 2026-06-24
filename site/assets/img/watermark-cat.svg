@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="presentation" aria-hidden="true">
+  <g fill="currentColor">
+    <path d="M35,150 C5,145 -5,110 15,85 C25,72 45,75 42,90 C38,103 25,108 28,122 C31,134 40,140 35,150 Z"/>
+    <ellipse cx="85" cy="140" rx="55" ry="48"/>
+    <ellipse cx="125" cy="100" rx="30" ry="55"/>
+    <circle cx="140" cy="55" r="28"/>
+    <polygon points="118,38 126,10 138,34"/>
+    <polygon points="140,32 150,8 160,36"/>
+  </g>
+</svg>
