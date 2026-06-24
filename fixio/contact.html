@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; devis gratuit — Fixio</title>
+<meta name="description" content="Demandez votre devis gratuit Fixio pour un dépannage à domicile : plomberie, électricité, électroménager, serrurerie, chauffage, petits travaux.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="./assets/img/logo.svg">
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="./index.html"><img src="./assets/img/logo.svg" alt="Fixio"> Fixio</a>
+    <ul class="nav-links">
+      <li><a href="./index.html">Accueil</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./tarifs.html">Tarifs</a></li>
+      <li><a href="./a-propos.html">À propos</a></li>
+      <li><a href="./contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:+33100000000">📞 01 00 00 00 00</a>
+      <a class="btn btn-primary" href="./contact.html">Devis gratuit</a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1>Demandez votre devis gratuit</h1>
+    <p>Décrivez votre besoin, nous vous recontactons rapidement avec un devis clair et un créneau d'intervention.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div>
+      <div class="contact-info-card">
+        <h3>📞 Téléphone</h3>
+        <a href="tel:+33100000000">01 00 00 00 00</a>
+      </div>
+      <div class="contact-info-card">
+        <h3>✉️ Email</h3>
+        <a href="mailto:contact@fixio.fr">contact@fixio.fr</a>
+      </div>
+      <div class="contact-info-card">
+        <h3>🕐 Horaires</h3>
+        <p>Lun–Sam · 7h–21h<br>Urgences 7j/7</p>
+      </div>
+      <div class="contact-info-card">
+        <h3>📍 Zone d'intervention</h3>
+        <p>Paris, Lyon, Bordeaux, Lille, Marseille et 30+ villes en France.</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div id="form-success" class="form-success">✅ Merci ! Votre demande a été enregistrée, un conseiller Fixio vous recontacte rapidement.</div>
+      <form id="quote-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Nom complet</label>
+            <input id="name" name="name" type="text" placeholder="Jean Dupont" required>
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone</label>
+            <input id="phone" name="phone" type="tel" placeholder="06 00 00 00 00" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="service">Type de service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choisissez un service</option>
+              <option value="plomberie">Plomberie</option>
+              <option value="electricite">Électricité</option>
+              <option value="electromenager">Électroménager</option>
+              <option value="serrurerie">Serrurerie</option>
+              <option value="chauffage">Chauffage &amp; climatisation</option>
+              <option value="travaux">Petits travaux</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="urgency">Urgence</label>
+            <select id="urgency" name="urgency" required>
+              <option value="standard">Standard (sous 48h)</option>
+              <option value="express">Express (sous 24h)</option>
+              <option value="urgence">Urgence (immédiate)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Décrivez votre problème</label>
+          <textarea id="message" name="message" rows="4" placeholder="Ex : fuite d'eau sous l'évier de la cuisine depuis ce matin" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Envoyer ma demande de devis</button>
+        <p class="form-note">En envoyant ce formulaire, vous acceptez d'être recontacté par Fixio au sujet de votre demande.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="./assets/img/logo.svg" alt="Fixio"> Fixio</div>
+        <p style="font-size:14px;">Le dépannage à domicile simple, rapide et garanti. Plomberie, électricité, électroménager, serrurerie.</p>
+        <div class="badge-row"><span>Devis gratuit</span><span>Garantie 6 mois</span><span>7j/7</span></div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="./services.html#plomberie">Plomberie</a></li>
+          <li><a href="./services.html#electricite">Électricité</a></li>
+          <li><a href="./services.html#electromenager">Électroménager</a></li>
+          <li><a href="./services.html#serrurerie">Serrurerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fixio</h4>
+        <ul>
+          <li><a href="./a-propos.html">À propos</a></li>
+          <li><a href="./tarifs.html">Tarifs</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33100000000">01 00 00 00 00</a></li>
+          <li><a href="mailto:contact@fixio.fr">contact@fixio.fr</a></li>
+          <li>Lun–Sam · 7h–21h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fixio. Tous droits réservés.</span>
+      <span>Service de dépannage à domicile</span>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
