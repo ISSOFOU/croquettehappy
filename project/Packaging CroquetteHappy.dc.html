@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="design_doc_mode" content="canvas">
+<style> body { font-family:'Geist',sans-serif; } </style>
+</helmet>
+
+<!-- ============ FRAME 1 : SYSTÈME (les deux sachets, look réel) ============ -->
+<div style="position:absolute; left:80px; top:80px; width:1080px;">
+  <div data-drags-parent="1" style="font-family:'Geist',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#5A6B52; margin-bottom:16px;">Système d'emballage — doypack bi-ton</div>
+  <div data-screen-label="Système" style="background:#EEF0EA; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:80px 72px; display:flex; gap:96px; justify-content:center; align-items:flex-end;">
+
+    <!-- SACHET CHIEN -->
+    <div style="display:flex; flex-direction:column; align-items:center; gap:22px;">
+      <div style="width:300px; height:480px; position:relative; filter:drop-shadow(0 26px 30px rgba(46,58,44,.22));">
+        <!-- fin / soudure haute -->
+        <div style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:74%; height:30px; background:#C7D1BC; border-radius:7px 7px 0 0;"></div>
+        <div style="position:absolute; top:7px; left:50%; transform:translateX(-50%); width:74%; height:6px; background:repeating-linear-gradient(90deg,rgba(46,58,44,.12) 0 2px,transparent 2px 6px);"></div>
+        <!-- corps -->
+        <div style="position:absolute; top:22px; left:0; right:0; bottom:0; border-radius:12px 12px 16px 16px; overflow:hidden; background:linear-gradient(#FAF7EF 0 50%, #A6B79A 50% 100%); box-shadow:inset 22px 0 30px -18px rgba(46,58,44,.28), inset -22px 0 30px -18px rgba(46,58,44,.28), inset 0 0 0 1px rgba(46,58,44,.05);">
+          <!-- filigrane patte -->
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-52%); font-size:150px; line-height:1; opacity:.16;">🐾</div>
+          <!-- marque -->
+          <div style="position:absolute; top:34px; left:0; right:0; text-align:center; font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:19px; color:#2E3A2C; letter-spacing:-.01em;">CroquetteHappy</div>
+          <div style="position:absolute; top:62px; left:0; right:0; text-align:center; font-family:'Geist',sans-serif; font-weight:500; font-size:11px; letter-spacing:.04em; color:#5A6B52;">Chien adulte</div>
+          <!-- grille d'icônes accent -->
+          <div style="position:absolute; bottom:96px; left:50%; transform:translateX(-50%); display:grid; grid-template-columns:repeat(2,14px); gap:5px;">
+            <div style="width:14px;height:14px;border-radius:3px;background:#E0A53B;"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:#C98A6A;"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:#2E3A2C;"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:#FAF7EF;"></div>
+          </div>
+          <div style="position:absolute; bottom:78px; left:0; right:0; text-align:center; font-family:'Geist',monospace; font-size:8px; letter-spacing:.1em; color:#3A4A36;">lot 6003</div>
+        </div>
+      </div>
+      <div style="font-family:'Geist',monospace; font-size:12px; color:#8A9682; letter-spacing:.06em;">CHIEN · filigrane patte · accent miel</div>
+    </div>
+
+    <!-- SACHET CHAT -->
+    <div style="display:flex; flex-direction:column; align-items:center; gap:22px;">
+      <div style="width:268px; height:430px; position:relative; filter:drop-shadow(0 26px 30px rgba(46,58,44,.22));">
+        <div style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:74%; height:28px; background:#D5DDCC; border-radius:7px 7px 0 0;"></div>
+        <div style="position:absolute; top:7px; left:50%; transform:translateX(-50%); width:74%; height:6px; background:repeating-linear-gradient(90deg,rgba(46,58,44,.1) 0 2px,transparent 2px 6px);"></div>
+        <div style="position:absolute; top:20px; left:0; right:0; bottom:0; border-radius:12px 12px 16px 16px; overflow:hidden; background:linear-gradient(#FAF7EF 0 54%, #C3D0BA 54% 100%); box-shadow:inset 20px 0 28px -16px rgba(46,58,44,.24), inset -20px 0 28px -16px rgba(46,58,44,.24), inset 0 0 0 1px rgba(46,58,44,.05);">
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:128px; line-height:1; opacity:.15;">🐈</div>
+          <div style="position:absolute; top:32px; left:0; right:0; text-align:center; font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:17px; color:#2E3A2C; letter-spacing:-.01em;">CroquetteHappy</div>
+          <div style="position:absolute; top:58px; left:0; right:0; text-align:center; font-family:'Geist',sans-serif; font-weight:500; font-size:10px; letter-spacing:.04em; color:#5A6B52;">Chat stérilisé</div>
+          <div style="position:absolute; bottom:84px; left:50%; transform:translateX(-50%); display:grid; grid-template-columns:repeat(2,13px); gap:5px;">
+            <div style="width:13px;height:13px;border-radius:3px;background:#C98A6A;"></div>
+            <div style="width:13px;height:13px;border-radius:3px;background:#E0A53B;"></div>
+            <div style="width:13px;height:13px;border-radius:3px;background:#2E3A2C;"></div>
+            <div style="width:13px;height:13px;border-radius:3px;background:#FAF7EF;"></div>
+          </div>
+          <div style="position:absolute; bottom:68px; left:0; right:0; text-align:center; font-family:'Geist',monospace; font-size:8px; letter-spacing:.1em; color:#3A4A36;">lot 6011</div>
+        </div>
+      </div>
+      <div style="font-family:'Geist',monospace; font-size:12px; color:#8A9682; letter-spacing:.06em;">CHAT · filigrane chat · accent terracotta</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============ FRAME 2 : LOGO ============ -->
+<div style="position:absolute; left:1240px; top:80px; width:520px;">
+  <div data-drags-parent="1" style="font-family:'Geist',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#5A6B52; margin-bottom:16px;">Logo — déclinaisons</div>
+  <div data-screen-label="Logo" style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:48px; display:flex; flex-direction:column; gap:28px;">
+    <div style="background:#FAF7EF; border:1px solid #E8E3D5; border-radius:8px; padding:40px; display:flex; flex-direction:column; align-items:center; gap:18px;">
+      <div style="width:90px; height:90px; border-radius:50%; background:#2E3A2C; display:flex; align-items:center; justify-content:center; font-size:46px; color:#FAF7EF;">🐾</div>
+      <div style="font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:26px; color:#2E3A2C;">CroquetteHappy</div>
+      <div style="font-family:'Geist',monospace; font-size:11px; color:#8A9682;">COULEUR · vert profond sur crème</div>
+    </div>
+    <div style="display:flex; gap:28px;">
+      <div style="flex:1; background:#2E3A2C; border-radius:8px; padding:32px; display:flex; flex-direction:column; align-items:center; gap:14px;">
+        <div style="width:64px; height:64px; border-radius:50%; border:1.5px solid rgba(250,247,239,.4); display:flex; align-items:center; justify-content:center; font-size:32px; filter:grayscale(1) brightness(3);">🐾</div>
+        <div style="font-family:'Geist',monospace; font-size:10px; color:rgba(250,247,239,.7);">MONO BLANC</div>
+      </div>
+      <div style="flex:1; background:#fff; border:1px solid #E8E3D5; border-radius:8px; padding:32px; display:flex; flex-direction:column; align-items:center; gap:14px;">
+        <div style="width:64px; height:64px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; filter:grayscale(1) brightness(0);">🐾</div>
+        <div style="font-family:'Geist',monospace; font-size:10px; color:#8A9682;">MONO NOIR</div>
+      </div>
+    </div>
+    <div style="font-size:12.5px; color:#5A6B52; line-height:1.6; text-align:center;">Pictogramme patte stylisée dans un cercle. <span style="color:#8A9682;">Placeholder ; à vectoriser.</span></div>
+  </div>
+</div>
+
+<!-- ============ FRAME 3 : PALETTE & TYPO ============ -->
+<div style="position:absolute; left:1240px; top:560px; width:520px;">
+  <div data-drags-parent="1" style="font-family:'Geist',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:#5A6B52; margin-bottom:16px;">Charte — couleurs & typo</div>
+  <div data-screen-label="Charte" style="background:#fff; border-radius:2px; box-shadow:0 1px 3px rgba(0,0,0,.08); padding:40px; display:flex; flex-direction:column; gap:28px;">
+    <sc-for list="{{ swatches }}" as="s" hint-placeholder-count="6">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <div style="width:42px; height:42px; border-radius:8px; background:{{ s.hex }}; box-shadow:inset 0 0 0 1px rgba(46,58,44,.08); flex-shrink:0;"></div>
+        <div style="flex:1;">
+          <div style="font-family:'Instrument Sans',sans-serif; font-weight:600; font-size:14px; color:#2E3A2C;">{{ s.name }}</div>
+          <div style="font-family:'Geist',monospace; font-size:12px; color:#8A9682;">{{ s.hex }}</div>
+        </div>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid #E8E3D5; padding-top:24px; display:flex; flex-direction:column; gap:14px;">
+      <div>
+        <div style="font-family:'Instrument Sans',sans-serif; font-weight:700; font-size:24px; color:#2E3A2C;">Instrument Sans</div>
+        <div style="font-family:'Geist',monospace; font-size:11px; color:#8A9682; margin-top:3px;">TITRES & NOM DE MARQUE · 600–700</div>
+      </div>
+      <div>
+        <div style="font-family:'Geist',sans-serif; font-weight:400; font-size:18px; color:#3A4A36;">Geist — texte courant, propre et lisible.</div>
+        <div style="font-family:'Geist',monospace; font-size:11px; color:#8A9682; margin-top:3px;">CORPS DE TEXTE · 400–500</div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      swatches: [
+        { name: "Crème (haut du sachet)", hex: "#FAF7EF" },
+        { name: "Vert sauge (bas — chien)", hex: "#A6B79A" },
+        { name: "Vert sauge clair (bas — chat)", hex: "#C3D0BA" },
+        { name: "Vert profond (titres)", hex: "#2E3A2C" },
+        { name: "Accent chien — Miel", hex: "#E0A53B" },
+        { name: "Accent chat — Terracotta", hex: "#C98A6A" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
