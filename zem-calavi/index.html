@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abomey-Calavi — Entre métropole et lagune, la commune qui ne cesse de grandir</title>
+<meta name="description" content="Guide d'Abomey-Calavi : géographie face à Cotonou et au lac Nokoué, l'Université d'Abomey-Calavi, peuples aïzo et toffin, saisons, gastronomie lacustre et adresses pratiques.">
+<link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Color Palette - Zem Calavi Design System */
+    --color-primary:        #F2B705;
+    --color-primary-hover:  #D9A300;
+    --color-primary-light: #FFF6DB;
+
+    --color-secondary:        #1F2421;
+    --color-secondary-subtle: #4F4633;
+
+    --color-tertiary:       #1B6B47;
+    --color-tertiary-light: #E4F5ED;
+
+    --color-background:        #FDFBF4;
+    --color-surface:           #FFFFFF;
+    --color-surface-container: #F5F4ED;
+    --color-surface-high:      #EAE8E1;
+
+    --color-text-main:  #1B1C18;
+    --color-text-muted: #606662;
+    --color-border:       #E5E0D0;
+    --color-border-hover: #1F2421;
+
+    --color-danger:       #BA1A1A;
+    --color-danger-light: #FFDAD6;
+
+    --display: 'Manrope', sans-serif;
+    --body: 'Manrope', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+
+    --wrap: 1180px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--body);
+    color:var(--color-text-main);
+    background:var(--color-background);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{ display:block; max-width:100%; }
+  a{ color:inherit; }
+  ::selection{ background:var(--color-primary); color:var(--color-text-main); }
+
+  :focus-visible{
+    outline:2px solid var(--color-primary);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:var(--wrap);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-weight:500;
+    opacity:.72;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;
+    height:1px;
+    background:currentColor;
+    opacity:.6;
+  }
+
+  h1,h2,h3{ font-family:var(--display); font-weight:800; letter-spacing:-.01em; }
+
+  .section-title{
+    font-size:clamp(28px,4vw,44px);
+    line-height:1.1;
+    max-width:17ch;
+    margin-bottom:20px;
+  }
+
+  .inner-heading{
+    font-family:var(--display);
+    font-size:clamp(20px,2.6vw,27px);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .inner-intro{
+    font-size:14.5px;
+    opacity:.72;
+    max-width:60ch;
+    margin-bottom:8px;
+  }
+  .sub-block{
+    margin-top:80px;
+    padding-top:52px;
+  }
+  .sub-block.on-dark{ border-top:1px solid rgba(253,251,244,.14); }
+  .sub-block.on-light{ border-top:1px solid rgba(27,28,24,.12); }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(253,251,244,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--color-border);
+  }
+  .nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:60px;
+  }
+  .nav-mark{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:.08em;
+    display:flex; align-items:center; gap:8px;
+    white-space:nowrap;
+  }
+  .nav-mark .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--color-primary);
+    flex-shrink:0;
+  }
+  .nav-links{
+    display:flex; gap:22px;
+    list-style:none;
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    overflow-x:auto;
+  }
+  .nav-links a{ text-decoration:none; opacity:.65; transition:opacity .15s; white-space:nowrap; }
+  .nav-links a:hover{ opacity:1; }
+  @media (max-width:900px){ .nav-links{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    background:radial-gradient(120% 90% at 50% 0%, #2c342d 0%, var(--color-secondary) 55%, #0f120f 100%);
+    color:var(--color-background);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+  }
+  .hero-map{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    opacity:.9;
+  }
+  .route-line{
+    fill:none;
+    stroke:var(--color-primary);
+    stroke-width:1.4;
+    stroke-linecap:round;
+    opacity:.55;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    animation:draw 2.4s ease-out forwards;
+  }
+  .route-line.water{
+    stroke:var(--color-tertiary);
+    stroke-dasharray:4 7;
+    opacity:.55;
+    animation:draw-water 2.4s ease-out forwards;
+  }
+  .route-line.d1{ animation-delay:.15s; }
+  .route-line.d2{ animation-delay:.35s; }
+  .route-line.d3{ animation-delay:.55s; }
+  .route-line.d4{ animation-delay:.75s; }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes draw-water{ to{ stroke-dashoffset:0; opacity:.55; } }
+
+  .hub{ fill:var(--color-primary); }
+  .hub-pulse{
+    fill:none; stroke:var(--color-primary); stroke-width:1;
+    transform-origin:400px 300px;
+    animation:pulse 3s ease-out infinite;
+    opacity:0;
+  }
+  @keyframes pulse{
+    0%{ opacity:.7; transform:scale(1); }
+    100%{ opacity:0; transform:scale(2.6); }
+  }
+  .node{ fill:var(--color-background); opacity:.85; }
+  .node-label{
+    font-family:var(--mono);
+    font-size:10.5px;
+    fill:var(--color-background);
+    opacity:.55;
+    letter-spacing:.04em;
+  }
+
+  .hero-content{
+    position:relative; z-index:2;
+    padding:120px 32px 64px;
+    max-width:var(--wrap);
+    margin:0 auto;
+    width:100%;
+  }
+  .hero .eyebrow{ color:var(--color-background); opacity:.7; }
+  .hero h1{
+    font-size:clamp(60px,13vw,152px);
+    line-height:.9;
+    font-weight:800;
+    letter-spacing:-.02em;
+  }
+  .hero-sub{
+    font-size:clamp(16px,2vw,21px);
+    max-width:40ch;
+    margin-top:22px;
+    font-weight:400;
+    color:var(--color-background);
+    opacity:.88;
+  }
+  .hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    margin-top:44px;
+    padding-top:24px;
+    border-top:1px solid rgba(253,251,244,.18);
+    font-family:var(--mono);
+  }
+  .hero-meta div{ font-size:12px; letter-spacing:.06em; text-transform:uppercase; opacity:.55; }
+  .hero-meta strong{
+    display:block; font-family:var(--body); font-size:17px;
+    font-weight:700; letter-spacing:0; text-transform:none;
+    opacity:1; margin-top:4px; color:var(--color-background);
+  }
+
+  .scroll-cue{
+    position:absolute; bottom:24px; right:32px; z-index:2;
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--color-background); opacity:.55;
+    writing-mode:vertical-rl;
+  }
+  @media (max-width:600px){ .scroll-cue{ display:none; } }
+
+  /* ---------- INTRO ---------- */
+  .intro{
+    padding:96px 0;
+    background:var(--color-background);
+  }
+  .intro .wrap{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:64px;
+    align-items:start;
+  }
+  .big-stat{
+    font-family:var(--mono);
+    font-size:clamp(44px,6.5vw,80px);
+    font-weight:600;
+    color:var(--color-tertiary);
+    line-height:1;
+  }
+  .big-stat-cap{
+    font-size:13.5px;
+    margin-top:14px;
+    max-width:26ch;
+    opacity:.75;
+  }
+  .intro-text p{
+    font-size:clamp(17px,1.6vw,20px);
+    max-width:54ch;
+  }
+  .intro-text p + p{ margin-top:16px; }
+  .intro-text em{
+    font-style:normal;
+    font-family:var(--display);
+    font-weight:700;
+    color:var(--color-secondary-subtle);
+  }
+  @media (max-width:800px){
+    .intro .wrap{ grid-template-columns:1fr; gap:32px; }
+  }
+
+  /* ---------- METROPOLE (dark) ---------- */
+  .metropole{
+    background:var(--color-secondary);
+    color:var(--color-background);
+    padding:110px 0;
+  }
+  .metropole .eyebrow, .metropole .section-title, .metropole .inner-heading{ color:var(--color-background); }
+  .metropole-intro{
+    max-width:60ch; opacity:.82; font-size:17px; margin-bottom:56px;
+  }
+  .bornes{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:rgba(253,251,244,.14);
+    border:1px solid rgba(253,251,244,.14);
+  }
+  .borne{
+    background:var(--color-secondary);
+    padding:32px 26px;
+    position:relative;
+  }
+  .borne-icon{
+    width:30px; height:30px;
+    color:var(--color-primary);
+    margin-bottom:16px;
+  }
+  .borne-dir{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--color-primary);
+    margin-bottom:14px;
+  }
+  .borne h3{
+    font-size:21px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:var(--color-background);
+  }
+  .borne-dist{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--color-primary);
+    margin-bottom:12px;
+  }
+  .borne p{ font-size:14px; opacity:.72; }
+  @media (max-width:900px){ .bornes{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .bornes{ grid-template-columns:1fr; } }
+
+  .traffic-note{
+    margin-top:40px;
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    font-size:14px;
+    opacity:.7;
+    max-width:66ch;
+    font-family:var(--mono);
+    line-height:1.7;
+  }
+
+  .scene-banner{
+    width:100%;
+    height:auto;
+    margin:44px 0 8px;
+    border-radius:2px;
+    display:block;
+  }
+  .scene-cap{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    opacity:.5;
+    margin-bottom:8px;
+  }
+  .photo-note{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-family:var(--mono);
+    font-size:12px;
+    line-height:1.7;
+    opacity:.55;
+    max-width:64ch;
+    margin-top:32px;
+  }
+
+  /* ---------- GANVIÉ / LIEUX ---------- */
+  .ganvie{ padding:110px 0; background:var(--color-background); }
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2px;
+    background:var(--color-border);
+    border:1px solid var(--color-border);
+    margin-top:56px;
+  }
+  .place-card{
+    background:var(--color-background);
+    padding:34px 28px;
+    transition:background .2s;
+  }
+  .place-card:hover{ background:var(--color-surface-container); }
+  a.place-card{ text-decoration:none; color:inherit; cursor:pointer; }
+  .place-icon{ width:34px; height:34px; margin-bottom:20px; color:var(--color-tertiary); }
+  .place-card h3{
+    font-size:19px; font-weight:700; margin-bottom:10px; line-height:1.25;
+  }
+  .place-card p{ font-size:14.5px; opacity:.78; }
+  .photo-tag{
+    display:inline-flex; align-items:center; gap:4px;
+    margin-top:20px;
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--color-tertiary);
+    border-bottom:1px solid transparent;
+  }
+  a.place-card:hover .photo-tag{ border-bottom-color:var(--color-tertiary); }
+  @media (max-width:900px){ .card-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){ .card-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- UNIVERSITÉ ---------- */
+  .universite{ padding:110px 0; background:var(--color-surface-container); }
+  .edu-top{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:64px;
+    align-items:start;
+    margin-bottom:56px;
+  }
+  @media (max-width:800px){ .edu-top{ grid-template-columns:1fr; gap:28px; } }
+
+  /* ---------- PEUPLES ---------- */
+  .peuples{ background:var(--color-secondary); color:var(--color-background); padding:110px 0; }
+  .peuples .eyebrow, .peuples .section-title{ color:var(--color-background); }
+  .peuples-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:72px;
+    margin-top:48px;
+  }
+  .bar-row{ margin-bottom:18px; }
+  .bar-label{
+    display:flex; justify-content:space-between;
+    font-size:14.5px; margin-bottom:6px;
+  }
+  .bar-label span:last-child{ font-family:var(--mono); color:var(--color-primary); font-size:13px; }
+  .bar-track{ height:8px; background:rgba(253,251,244,.14); border-radius:2px; overflow:hidden; }
+  .bar-fill{ height:100%; background:var(--color-primary); border-radius:2px; }
+  .bar-note{ font-family:var(--mono); font-size:12px; opacity:.55; margin-top:20px; line-height:1.7; }
+
+  .peuples-side h3{ font-size:15px; margin-bottom:12px; opacity:.85; font-weight:700; letter-spacing:.02em; }
+  .peuples-side p{ font-size:14.5px; opacity:.72; margin-bottom:22px; }
+  .peuples-side p strong{ color:var(--color-background); font-weight:700; opacity:1; }
+
+  @media (max-width:800px){ .peuples-grid{ grid-template-columns:1fr; gap:36px; } }
+
+  /* ---------- SAISONS ---------- */
+  .saisons{ padding:110px 0; background:var(--color-background); }
+  .season-cards{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:48px;
+  }
+  .season-card{
+    border:1px solid var(--color-border);
+    padding:32px;
+  }
+  .season-card .eyebrow{ margin-bottom:14px; }
+  .season-card h3{ font-size:22px; margin-bottom:10px; }
+  .season-card p{ font-size:14.5px; opacity:.78; }
+  .season-temp{ font-family:var(--mono); color:var(--color-tertiary); font-size:15px; margin-top:14px; }
+  @media (max-width:700px){ .season-cards{ grid-template-columns:1fr; } }
+
+  .fetes{ margin-top:64px; }
+  .fete-row{
+    display:grid; grid-template-columns:200px 1fr; gap:24px;
+    padding:22px 0; border-top:1px solid var(--color-border);
+  }
+  .fete-row:last-child{ border-bottom:1px solid var(--color-border); }
+  .fete-name{ font-family:var(--display); font-size:18px; font-weight:700; }
+  .fete-row p{ font-size:14.5px; opacity:.78; }
+  @media (max-width:600px){ .fete-row{ grid-template-columns:1fr; gap:6px; } }
+
+  /* ---------- SAVEURS ---------- */
+  .saveurs{
+    background:linear-gradient(180deg, var(--color-tertiary) 0%, #124a33 100%);
+    color:var(--color-background);
+    padding:110px 0;
+  }
+  .saveurs .eyebrow, .saveurs .section-title, .saveurs .inner-heading{ color:var(--color-background); }
+  .menu-list{ margin-top:48px; max-width:760px; }
+  .menu-item{
+    display:flex; justify-content:space-between; align-items:center;
+    gap:20px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(253,251,244,.22);
+  }
+  .menu-item:first-child{ border-top:1px solid rgba(253,251,244,.22); }
+  .menu-name{ font-family:var(--display); font-size:19px; font-weight:700; }
+  .menu-name small{
+    display:block; font-family:var(--mono); font-size:12px; opacity:.7; margin-top:4px; font-weight:400;
+  }
+  .menu-desc{ font-size:13.5px; text-align:right; max-width:32ch; opacity:.85; }
+  @media (max-width:600px){
+    .menu-item{ flex-direction:column; gap:6px; }
+    .menu-desc{ text-align:left; }
+  }
+
+  .addr-list{ margin-top:32px; max-width:760px; }
+  .addr-item{ padding:16px 0; border-bottom:1px dashed rgba(253,251,244,.25); }
+  .addr-item:first-child{ border-top:1px dashed rgba(253,251,244,.25); }
+  .addr-name{ font-weight:700; font-size:15.5px; }
+  .addr-item p{ font-size:13.5px; opacity:.78; margin-top:4px; }
+
+  /* ---------- DORMIR ---------- */
+  .dormir{ padding:110px 0; background:var(--color-surface-container); }
+  .hotel-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2px;
+    background:var(--color-border);
+    border:1px solid var(--color-border);
+    margin-top:56px;
+  }
+  .hotel-card{ background:var(--color-surface-container); padding:32px 28px; }
+  .hotel-quartier{
+    font-family:var(--mono); font-size:11px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--color-tertiary); margin-bottom:10px;
+  }
+  .hotel-card h3{ font-size:19px; margin-bottom:8px; }
+  .hotel-card p{ font-size:14px; opacity:.75; }
+  @media (max-width:700px){ .hotel-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- PRATIQUE ---------- */
+  .pratique{ background:var(--color-secondary); color:var(--color-background); padding:110px 0; }
+  .pratique .eyebrow, .pratique .section-title{ color:var(--color-background); }
+  .pratique-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:36px; margin-top:48px;
+  }
+  .pratique-item h3{ font-size:17px; margin-bottom:10px; font-weight:700; color:var(--color-primary); }
+  .pratique-item p{ font-size:14.5px; opacity:.75; }
+  @media (max-width:800px){ .pratique-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:#14170e;
+    color:var(--color-background);
+    padding:56px 0 36px;
+  }
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+  }
+  .footer-mark{ font-family:var(--display); font-size:26px; font-weight:800; }
+  .footer-note{
+    font-family:var(--mono); font-size:12px; opacity:.5; max-width:46ch; line-height:1.7;
+  }
+  .footer-coords{ font-family:var(--mono); font-size:12px; opacity:.55; text-align:right; }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ animation-duration:.001s !important; animation-iteration-count:1 !important; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-mark"><span class="dot"></span> ABOMEY-CALAVI · ATLANTIQUE</div>
+    <ul class="nav-links">
+      <li><a href="#metropole">Métropole</a></li>
+      <li><a href="#ganvie">Le lac</a></li>
+      <li><a href="#universite">Université</a></li>
+      <li><a href="#peuples">Peuples</a></li>
+      <li><a href="#saisons">Saisons</a></li>
+      <li><a href="#saveurs">Table</a></li>
+      <li><a href="#dormir">Dormir</a></li>
+      <li><a href="#pratique">Pratique</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="hero-map" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path class="route-line d1" d="M400,300 L620,420" />
+    <path class="route-line water d1" d="M400,300 L520,470" />
+    <path class="route-line d2" d="M400,300 L160,240" />
+    <path class="route-line d3" d="M400,300 L400,30" />
+    <path class="route-line d4" d="M400,300 L700,120" />
+
+    <circle class="hub-pulse" cx="400" cy="300" r="10" />
+    <circle class="hub-pulse" cx="400" cy="300" r="10" style="animation-delay:1.5s" />
+    <circle class="hub" cx="400" cy="300" r="5.5" />
+
+    <circle class="node" cx="628" cy="424" r="3" />
+    <text class="node-label" x="640" y="428">COTONOU · 17 KM</text>
+
+    <circle class="node" cx="524" cy="474" r="3" />
+    <text class="node-label" x="480" y="494">LAC NOKOUÉ / GANVIÉ</text>
+
+    <circle class="node" cx="155" cy="236" r="3" />
+    <text class="node-label" x="20" y="232">OUIDAH</text>
+
+    <circle class="node" cx="400" cy="24" r="3" />
+    <text class="node-label" x="412" y="28">ZINVIÉ / ALLADA</text>
+
+    <circle class="node" cx="706" cy="114" r="3" />
+    <text class="node-label" x="580" y="100">GODOMEY</text>
+  </svg>
+
+  <div class="hero-content">
+    <div class="eyebrow">Sud du Bénin · Département de l'Atlantique</div>
+    <h1>Abomey-Calavi</h1>
+    <p class="hero-sub">Aux portes de Cotonou et du lac Nokoué, la commune la plus dynamique du Bénin — portée par sa jeunesse étudiante et une croissance urbaine qui ne ralentit pas.</p>
+    <div class="hero-meta">
+      <div>Coordonnées <strong>6°27′ N, 2°21′ E</strong></div>
+      <div>Population <strong>≈ 656 000 hab.</strong></div>
+      <div>Rang national <strong>2ᵉ commune du Bénin</strong></div>
+      <div>Superficie <strong>≈ 650 km²</strong></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Découvrir la commune ↓</div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <div>
+      <div class="big-stat">655 965</div>
+      <p class="big-stat-cap">habitants au recensement de 2013 (RGPH4) — plus du double de la population enregistrée en 2002.</p>
+    </div>
+    <div class="intro-text">
+      <p>Longtemps terre de villages aïzo au bord du lac Nokoué, Abomey-Calavi est devenue en une génération le prolongement direct de Cotonou : à peine 17 kilomètres séparent son centre de la capitale économique, et l'agglomération des deux villes ne forme plus, dans les faits, qu'une seule métropole continue.</p>
+      <p>La commune doit une bonne part de sa vitalité à l'<em>Université d'Abomey-Calavi</em>, la plus grande du pays, qui attire chaque année des dizaines de milliers d'étudiants venus de tout le Bénin — et fait de cette ancienne bourgade lacustre l'une des villes les plus jeunes et les plus mouvantes d'Afrique de l'Ouest.</p>
+    </div>
+  </div>
+</section>
+
+<section class="metropole" id="metropole">
+  <div class="wrap">
+    <div class="eyebrow">Entre métropole et lagune</div>
+    <h2 class="section-title">Une commune à cheval entre ville et lac</h2>
+    <p class="metropole-intro">Abomey-Calavi n'est ni tout à fait une ville autonome, ni une simple banlieue : c'est un territoire à quatre visages, tiré d'un côté vers l'effervescence urbaine de Cotonou, de l'autre vers les eaux calmes du lac Nokoué et l'arrière-pays aïzo.</p>
+
+    <div class="bornes">
+      <div class="borne">
+        <div class="borne-dir">Est</div>
+        <h3>Cotonou</h3>
+        <div class="borne-dist">≈ 17 KM · RNIE1</div>
+        <p>La capitale économique et son aéroport international, aujourd'hui reliés à Calavi par une agglomération quasi continue.</p>
+      </div>
+      <div class="borne">
+        <div class="borne-dir">Sud</div>
+        <h3>Lac Nokoué</h3>
+        <div class="borne-dist">EMBARCADÈRE DE GANVIÉ</div>
+        <p>La porte d'entrée vers les cités lacustres bâties sur pilotis, à une vingtaine de minutes de pirogue motorisée.</p>
+      </div>
+      <div class="borne">
+        <div class="borne-dir">Ouest</div>
+        <h3>Ouidah</h3>
+        <div class="borne-dist">VERS LA ROUTE DES ESCLAVES</div>
+        <p>L'axe côtier qui mène à la cité historique du vodun et de la mémoire de la traite négrière.</p>
+      </div>
+      <div class="borne">
+        <div class="borne-dir">Nord</div>
+        <h3>Zinvié &amp; Allada</h3>
+        <div class="borne-dist">PLATEAU AÏZO</div>
+        <p>L'arrière-pays agricole, plus calme, où la commune retrouve ses racines de terre aïzo.</p>
+      </div>
+    </div>
+
+    <p class="traffic-note">— L'axe Calavi–Cotonou, en particulier autour du pont de Houédonou et du carrefour IITA, reste l'un des points de congestion les plus commentés du Bénin : plus d'une heure de trajet aux heures de pointe n'a rien d'exceptionnel.</p>
+
+    <div class="sub-block on-dark">
+      <div class="eyebrow">Neuf arrondissements, un seul élan</div>
+      <h3 class="inner-heading">Godomey, le quartier qui a rattrapé Cotonou</h3>
+      <p class="inner-intro">La commune se divise en neuf arrondissements — Abomey-Calavi, Akassato, Godomey, Golo-Djigbé, Hêvié, Kpanroun, Ouèdo, Togba et Zinvié. Aucun n'illustre mieux la fusion avec Cotonou que Godomey, devenu à lui seul plus peuplé que bien des villes du pays.</p>
+
+      <div class="bornes" style="margin-top:32px;">
+        <div class="borne">
+          <svg class="borne-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="16" width="32" height="24" rx="1"/><path d="M8 24h32M16 16v-4h16v4"/><rect x="16" y="30" width="6" height="6"/><rect x="26" y="30" width="6" height="6"/></svg>
+          <div class="borne-dir">Frontière Cotonou</div>
+          <h3>Godomey</h3>
+          <div class="borne-dist">253 262 HAB. (2013)</div>
+          <p>L'arrondissement le plus peuplé de la commune, presque entièrement absorbé par l'agglomération de Cotonou.</p>
+        </div>
+        <div class="borne">
+          <svg class="borne-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6l7 16H17Z"/><rect x="19" y="22" width="10" height="14"/><path d="M13 40h22"/></svg>
+          <div class="borne-dir">Centre historique</div>
+          <h3>Abomey-Calavi (centre)</h3>
+          <div class="borne-dist">117 824 HAB. (2013)</div>
+          <p>L'arrondissement qui donne son nom à la commune, autour du campus universitaire et du marché central.</p>
+        </div>
+        <div class="borne">
+          <svg class="borne-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 4C16 12 12 18 12 26a12 12 0 0 0 24 0c0-8-4-14-12-22Z"/><path d="M24 22v18"/></svg>
+          <div class="borne-dir">Vers Allada</div>
+          <h3>Golo-Djigbé</h3>
+          <div class="borne-dist">28 103 HAB. (2013)</div>
+          <p>Un arrondissement plus rural, au nord de la commune, encore largement tourné vers l'agriculture.</p>
+        </div>
+        <div class="borne">
+          <svg class="borne-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 36h36M12 36 24 14l12 22M24 14V7"/><circle cx="24" cy="7" r="2.4" fill="currentColor" stroke="none"/></svg>
+          <div class="borne-dir">Extrême nord</div>
+          <h3>Zinvié</h3>
+          <div class="borne-dist">18 157 HAB. (2013)</div>
+          <p>Le plus rural des neuf arrondissements, encore proche de la vie villageoise aïzo d'origine.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ganvie" id="ganvie">
+  <div class="wrap">
+    <div class="eyebrow">À voir</div>
+    <h2 class="section-title">Le lac qui a fait la légende de Calavi</h2>
+
+    <svg class="scene-banner" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration stylisée de pirogues et de maisons sur pilotis sur le lac Nokoué">
+      <defs>
+        <linearGradient id="lakeSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="var(--color-tertiary-light)" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="lakeWater" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="var(--color-tertiary)" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="var(--color-tertiary)" stop-opacity="0.08"/>
+        </linearGradient>
+      </defs>
+      <rect width="900" height="260" fill="var(--color-background)"/>
+      <rect width="900" height="150" fill="url(#lakeSky)"/>
+      <circle cx="760" cy="60" r="42" fill="var(--color-primary)" opacity="0.28"/>
+      <rect x="0" y="170" width="900" height="90" fill="url(#lakeWater)"/>
+      <line x1="0" y1="170" x2="900" y2="170" stroke="var(--color-tertiary)" stroke-opacity="0.3"/>
+
+      <g opacity="0.92">
+        <line x1="95" y1="150" x2="95" y2="192" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <line x1="140" y1="150" x2="140" y2="192" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <path d="M80,150 100,120 150,120 160,150 Z" fill="var(--color-secondary-subtle)"/>
+        <rect x="86" y="150" width="68" height="4" fill="var(--color-secondary-subtle)"/>
+      </g>
+
+      <g opacity="0.92">
+        <line x1="245" y1="158" x2="245" y2="198" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <line x1="300" y1="158" x2="300" y2="198" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <path d="M228,158 250,128 296,128 312,158 Z" fill="var(--color-tertiary)" opacity="0.85"/>
+        <rect x="236" y="158" width="68" height="4" fill="var(--color-secondary-subtle)"/>
+      </g>
+
+      <g transform="translate(400,178)" opacity="0.9">
+        <path d="M-70,10 Q0,-14 70,10 L58,20 -58,20 Z" fill="var(--color-secondary)"/>
+        <path d="M-10,10 L-10,-38" stroke="var(--color-secondary)" stroke-width="3"/>
+        <path d="M-10,-38 30,-6 -10,10 Z" fill="var(--color-primary)"/>
+      </g>
+
+      <g opacity="0.92">
+        <line x1="555" y1="152" x2="555" y2="194" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <line x1="606" y1="152" x2="606" y2="194" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <path d="M540,152 560,122 602,122 618,152 Z" fill="var(--color-secondary-subtle)"/>
+        <rect x="546" y="152" width="66" height="4" fill="var(--color-secondary-subtle)"/>
+      </g>
+
+      <g transform="translate(700,190) scale(0.85)" opacity="0.85">
+        <path d="M-65,8 Q0,-12 65,8 L54,18 -54,18 Z" fill="var(--color-secondary)"/>
+        <path d="M-6,8 L-6,-34" stroke="var(--color-secondary)" stroke-width="3"/>
+        <path d="M-6,-34 26,-6 -6,8 Z" fill="var(--color-tertiary)"/>
+      </g>
+
+      <g opacity="0.92">
+        <line x1="770" y1="160" x2="770" y2="200" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <line x1="820" y1="160" x2="820" y2="200" stroke="var(--color-secondary-subtle)" stroke-width="4"/>
+        <path d="M755,160 775,130 815,130 833,160 Z" fill="var(--color-secondary-subtle)"/>
+        <rect x="761" y="160" width="66" height="4" fill="var(--color-secondary-subtle)"/>
+      </g>
+    </svg>
+    <p class="scene-cap">Maisons sur pilotis et pirogues sur le lac Nokoué — illustration originale</p>
+
+    <div class="card-grid">
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 36h36M10 36V16l14-8 14 8v20M18 36V22h12v14"/></svg>
+        <h3>Ganvié, la Venise de l'Afrique</h3>
+        <p>Une cité entière bâtie sur pilotis, où plus de 35 000 Tofinu vivent, travaillent et se déplacent uniquement en pirogue.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 30 24 10l18 20M10 30v6h28v-6"/><path d="M20 36v-8h8v8"/></svg>
+        <h3>Embarcadère d'Abomey-Calavi</h3>
+        <p>Le point de départ des pirogues motorisées vers Ganvié : 20 à 40 minutes de traversée selon le point d'arrivée.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16 24 6l20 10-20 10Z"/><path d="M12 21v10c0 3 5 6 12 6s12-3 12-6V21"/><path d="M44 16v14"/></svg>
+        <h3>Campus de l'UAC</h3>
+        <p>Le grand campus arboré de l'Université d'Abomey-Calavi, cœur battant de la vie étudiante de la commune.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 18 12 8h24l4 10M8 18v20h32V18M8 18h32M16 38v-10M24 38v-10M32 38v-10"/></svg>
+        <h3>Marché de Calavi</h3>
+        <p>Un marché animé au cœur de la ville, entre produits vivriers du plateau aïzo et poissons du lac Nokoué.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="16" width="32" height="24" rx="1"/><path d="M8 24h32M16 16v-4h16v4"/><rect x="16" y="30" width="6" height="6"/><rect x="26" y="30" width="6" height="6"/></svg>
+        <h3>Godomey</h3>
+        <p>Le quartier le plus urbanisé de la commune, prolongement direct de Cotonou et pôle commercial en pleine expansion.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 4C16 12 12 18 12 26a12 12 0 0 0 24 0c0-8-4-14-12-22Z"/><path d="M24 22v18"/></svg>
+        <h3>Plateau aïzo, vers Zinvié</h3>
+        <p>Les villages agricoles de l'arrière-pays, où la commune garde le visage plus calme de ses origines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="universite" id="universite">
+  <div class="wrap">
+    <div class="eyebrow">Éducation</div>
+    <h2 class="section-title">La plus grande université du Bénin</h2>
+
+    <div class="edu-top">
+      <div>
+        <div class="big-stat" style="font-size:clamp(38px,5.5vw,58px);">68 472</div>
+        <p class="big-stat-cap">étudiants inscrits à l'UAC en 2019–2020 — contre un peu plus de 16 000 vingt ans plus tôt.</p>
+      </div>
+      <div class="intro-text">
+        <p>Fondée en 1970 sous le nom d'Université du Dahomey, rebaptisée Université Nationale du Bénin en 1975 puis Université d'Abomey-Calavi en 2001, l'UAC est aujourd'hui la plus grande et la plus ancienne université publique du pays.</p>
+        <p>Chaque rentrée d'octobre transforme la commune : des dizaines de milliers d'étudiants venus de tout le Bénin, et au-delà, font affluer vers Calavi une vie estudiantine dense, faite de cités universitaires, de maquis et de librairies de trottoir.</p>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16 24 6l20 10-20 10Z"/><path d="M12 21v10c0 3 5 6 12 6s12-3 12-6V21"/><path d="M44 16v14"/></svg>
+        <h3>Campus principal</h3>
+        <p>Réparti sur un vaste terrain arboré, il regroupe la majorité des facultés, écoles et laboratoires de recherche de l'UAC.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="14" width="32" height="24" rx="1"/><path d="M8 22h32M16 14v-4h16v4"/></svg>
+        <h3>Grandes écoles rattachées</h3>
+        <p>Écoles doctorales, instituts professionnels et facultés spécialisées font de l'UAC un ensemble à la fois vaste et diversifié.</p>
+      </div>
+      <div class="place-card">
+        <svg class="place-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 40V16l16-8 16 8v24"/><path d="M8 40h32M20 40V26h8v14"/></svg>
+        <h3>Cités et résidences universitaires</h3>
+        <p>Logements étudiants et quartiers voisins absorbent chaque année une part croissante de la population de la commune.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="peuples" id="peuples">
+  <div class="wrap">
+    <div class="eyebrow">Une commune qui explose</div>
+    <h2 class="section-title">De terre aïzo à melting-pot urbain</h2>
+
+    <div class="peuples-grid">
+      <div>
+        <div class="bar-row">
+          <div class="bar-label"><span>Godomey</span><span>253 262 hab.</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>Abomey-Calavi (centre)</span><span>117 824 hab.</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:46.5%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>Golo-Djigbé</span><span>28 103 hab.</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:11.1%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>Zinvié</span><span>18 157 hab.</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:7.2%"></div></div>
+        </div>
+        <p class="bar-note">Quatre des neuf arrondissements de la commune, recensement RGPH4 (2013) — les cinq autres (Akassato, Hêvié, Kpanroun, Ouèdo, Togba) complètent les 655 965 habitants recensés au total.</p>
+      </div>
+
+      <div class="peuples-side">
+        <h3>Peuples</h3>
+        <p>Les <strong>Aïzo</strong>, agriculteurs historiques du plateau, cohabitent avec les <strong>Toffin</strong>, peuple du lac installé à Ganvié et Sô-Ava, ainsi qu'avec des communautés <strong>fon, goun et yoruba</strong> venues de tout le Sud-Bénin.</p>
+        <h3>Langues</h3>
+        <p>Le <strong>fon</strong> et l'<strong>aïzo</strong> dominent le quotidien, aux côtés du toffin, du tori, de l'adja, du goun, du xwla et du yoruba — le français restant la langue de l'administration et de l'université.</p>
+        <h3>Une ville de passage</h3>
+        <p>À ces communautés installées de longue date s'ajoute, chaque année universitaire, une population étudiante venue de tout le pays — un afflux qui a largement nourri la croissance démographique de la commune.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="saisons" id="saisons">
+  <div class="wrap">
+    <div class="eyebrow">Quand venir</div>
+    <h2 class="section-title">Un climat sud-équatorial, quatre saisons</h2>
+
+    <div class="season-cards">
+      <div class="season-card">
+        <div class="eyebrow">Avril → Juillet</div>
+        <h3>Grande saison des pluies</h3>
+        <p>La période la plus arrosée de l'année, portée par la mousson venue du golfe de Guinée.</p>
+        <div class="season-temp">Climat chaud et humide</div>
+      </div>
+      <div class="season-card">
+        <div class="eyebrow">Juillet → Août</div>
+        <h3>Petite saison sèche</h3>
+        <p>Une accalmie plus fraîche entre les deux pics de pluies, souvent la plus agréable pour visiter.</p>
+        <div class="season-temp">Ciel plus dégagé</div>
+      </div>
+      <div class="season-card">
+        <div class="eyebrow">Septembre → Octobre</div>
+        <h3>Petite saison des pluies</h3>
+        <p>Un second épisode pluvieux, plus court, qui coïncide souvent avec la rentrée universitaire.</p>
+        <div class="season-temp">Averses fréquentes</div>
+      </div>
+      <div class="season-card">
+        <div class="eyebrow">Novembre → Mars</div>
+        <h3>Grande saison sèche</h3>
+        <p>Ciel dégagé et harmattan en fin de période — la meilleure fenêtre pour découvrir le lac et la commune.</p>
+        <div class="season-temp">Chaleur sèche et stable</div>
+      </div>
+    </div>
+
+    <div class="fetes">
+      <div class="fete-row">
+        <div class="fete-name">Vodun Days</div>
+        <p>Le 10 janvier, fête nationale du vodun célébrée dans tout le Sud-Bénin — cérémonies, danses et processions rythment aussi la commune de Calavi.</p>
+      </div>
+      <div class="fete-row">
+        <div class="fete-name">Rentrée universitaire</div>
+        <p>Chaque octobre, le retour de dizaines de milliers d'étudiants transforme le rythme et l'animation de la ville pour toute l'année académique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="saveurs" id="saveurs">
+  <div class="wrap">
+    <div class="eyebrow">À table</div>
+    <h2 class="section-title">Les saveurs du lac et du plateau</h2>
+
+    <div class="menu-list">
+      <div class="menu-item">
+        <div class="menu-name">Wassa-wassa<small>Couscous de manioc fermenté</small></div>
+        <div class="menu-desc">Une spécialité toffin des rives du lac, souvent servie avec une sauce poisson relevée.</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-name">Poisson braisé du lac Nokoué</div>
+        <div class="menu-desc">Tilapia ou silure grillé, pêché dans le lac et vendu frais sur les rives et au marché.</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-name">Akassa<small>Pâte de maïs fermentée</small></div>
+        <div class="menu-desc">La base de nombreux repas du sud du pays, fraîche et légèrement acidulée.</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-name">Ablo<small>Gâteau de riz vapeur</small></div>
+        <div class="menu-desc">Petit pain moelleux à la vapeur, souvent vendu comme en-cas de rue en fin de journée.</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-name">Kluiklui</div>
+        <div class="menu-desc">Beignets d'arachide croustillants, grignotés partout autour du campus et des marchés.</div>
+      </div>
+    </div>
+
+    <div class="sub-block on-dark">
+      <div class="eyebrow">Où manger</div>
+      <h3 class="inner-heading">Trois façons de passer à table</h3>
+      <p class="inner-intro">L'offre de restauration de Calavi évolue vite, portée par la population étudiante — vérifie les avis récents avant de t'y fier totalement. En attendant, trois pistes fiables :</p>
+
+      <div class="addr-list">
+        <div class="addr-item">
+          <div class="addr-name">Restaurants d'hôtel en bord de lac</div>
+          <p>Les établissements installés en bord de lac, comme les éco-lodges du secteur, proposent une cuisine locale dans un cadre plus calme.</p>
+        </div>
+        <div class="addr-item">
+          <div class="addr-name">Les maquis autour du campus</div>
+          <p>Autour de l'UAC, les maquis servent grillades, akassa et wassa-wassa dans une ambiance résolument étudiante et populaire.</p>
+        </div>
+        <div class="addr-item">
+          <div class="addr-name">Les gargotes du marché de Calavi</div>
+          <p>Une cuisine de rue simple et abordable, à toute heure, au cœur de l'agitation du marché.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dormir" id="dormir">
+  <div class="wrap">
+    <div class="eyebrow">Se loger</div>
+    <h2 class="section-title">Où poser ses valises</h2>
+    <p class="inner-intro" style="margin-bottom:8px;">Une sélection d'adresses bien notées par les voyageurs — à confirmer selon tes dates, l'offre d'hébergement de Calavi évolue vite.</p>
+
+    <div class="hotel-grid">
+      <div class="hotel-card">
+        <div class="hotel-quartier">Rives du lac Nokoué</div>
+        <h3>Assouka Éco-Village</h3>
+        <p>Un éco-lodge en bord de lac, avec terrasse, restaurant et bar — une base agréable avant une excursion vers Ganvié.</p>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-quartier">Centre-ville</div>
+        <h3>Hôtel Les Arcades</h3>
+        <p>Salon commun, terrasse, restaurant et bar — une adresse propre et bien tenue, souvent citée par les voyageurs.</p>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-quartier">Cadre calme</div>
+        <h3>L'Ayifa Hotel Center</h3>
+        <p>Une ancienne ferme reconvertie, nichée parmi les manguiers, pour un séjour plus paisible à l'écart de l'agitation.</p>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-quartier">Près du campus</div>
+        <h3>Résidences universitaires</h3>
+        <p>Cités U et logements privés autour de l'UAC accueillent l'essentiel de la population étudiante de la commune.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pratique" id="pratique">
+  <div class="wrap">
+    <div class="eyebrow">Se déplacer</div>
+    <h2 class="section-title">Zemidjans, embouteillages et lagune</h2>
+
+    <svg class="scene-banner" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration stylisée de zemidjans dans un embouteillage sur l'axe Calavi-Cotonou">
+      <defs>
+        <linearGradient id="jamSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="var(--color-secondary)" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="var(--color-secondary)" stop-opacity="0.5"/>
+        </linearGradient>
+      </defs>
+      <rect width="900" height="220" fill="url(#jamSky)"/>
+      <g opacity="0.5">
+        <rect x="30" y="140" width="70" height="46" fill="var(--color-secondary-subtle)"/>
+        <rect x="115" y="120" width="90" height="66" fill="var(--color-secondary-subtle)"/>
+        <rect x="220" y="150" width="60" height="36" fill="var(--color-secondary-subtle)"/>
+        <rect x="700" y="135" width="80" height="51" fill="var(--color-secondary-subtle)"/>
+        <rect x="795" y="115" width="75" height="71" fill="var(--color-secondary-subtle)"/>
+      </g>
+      <line x1="20" y1="186" x2="880" y2="186" stroke="var(--color-primary)" stroke-width="1" opacity="0.4"/>
+
+      <g transform="translate(340,0)">
+        <circle cx="-30" cy="172" r="18" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+        <circle cx="42" cy="172" r="18" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+        <path d="M-30,172 L-8,142 L22,142 L42,172" fill="none" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M-6,142 L-2,102" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round"/>
+        <path d="M22,142 L37,112" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="-13" cy="96" rx="18" ry="11" fill="var(--color-tertiary)"/>
+        <circle cx="-26" cy="79" r="9" fill="var(--color-tertiary)"/>
+      </g>
+
+      <g transform="translate(160,20) scale(0.6)" opacity="0.6">
+        <circle cx="-30" cy="172" r="18" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+        <circle cx="42" cy="172" r="18" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+        <path d="M-30,172 L-8,142 L22,142 L42,172" fill="none" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M-6,142 L-2,102" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="-13" cy="96" rx="18" ry="11" fill="var(--color-primary)"/>
+        <circle cx="-26" cy="79" r="9" fill="var(--color-primary)"/>
+      </g>
+
+      <g transform="translate(600,26) scale(0.55)" opacity="0.5">
+        <circle cx="-30" cy="172" r="18" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+        <circle cx="42" cy="172" r="18" fill="none" stroke="var(--color-primary)" stroke-width="4"/>
+        <path d="M-30,172 L-8,142 L22,142 L42,172" fill="none" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M-6,142 L-2,102" stroke="var(--color-background)" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="-13" cy="96" rx="18" ry="11" fill="var(--color-tertiary)"/>
+        <circle cx="-26" cy="79" r="9" fill="var(--color-tertiary)"/>
+      </g>
+    </svg>
+    <p class="scene-cap">Zemidjans coincés sur l'axe Calavi–Cotonou aux heures de pointe — illustration originale</p>
+
+    <div class="pratique-grid">
+      <div class="pratique-item">
+        <h3>Zemidjans</h3>
+        <p>Les motos-taxis, ou « kékéno », restent le moyen le plus rapide de se faufiler entre les quartiers quand la route est bloquée.</p>
+      </div>
+      <div class="pratique-item">
+        <h3>Route RNIE1</h3>
+        <p>L'axe Cotonou–Calavi, souvent saturé près du pont de Houédonou et du carrefour IITA, surtout en début et fin de journée.</p>
+      </div>
+      <div class="pratique-item">
+        <h3>Pirogues</h3>
+        <p>Depuis l'embarcadère d'Abomey-Calavi, elles restent l'unique moyen de rejoindre Ganvié et les villages du lac Nokoué.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="footer-mark">Abomey-Calavi</div>
+      <p class="footer-note">Guide indépendant réalisé pour présenter la commune — non affilié à la mairie d'Abomey-Calavi ni à l'UAC. Repères issus de sources publiques (INSAE, Wikipédia, presse béninoise, guides de voyage).</p>
+    </div>
+    <div class="footer-coords">6°27′ N, 2°21′ E<br>Atlantique · Bénin</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 [build]
-  publish = "parakou"
+  publish = "zem-calavi"
 
 [[headers]]
   for = "/*"
